@@ -4,13 +4,17 @@ import { useState } from "react"
 import './index.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [todos, setTodos] = useState(['goto gym','go to school']);
 
+  function handleAddTodos(newTodo){
+    const newTodoList=[...todos,newTodo];
+    setTodos(newTodoList);
+  }
   return (
     
         <>
-          <TodoInput></TodoInput>
-          <TodoList></TodoList>
+          <TodoInput handleAddTodos={handleAddTodos}></TodoInput>
+          <TodoList todos={todos}></TodoList>
         </>
   )
 }
