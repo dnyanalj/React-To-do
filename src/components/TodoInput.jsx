@@ -8,7 +8,7 @@ export default function TodoInput(props) {
     <header>
       <input value={todoValue} onChange={(e)=>{
         setTodoValue(e.target.value);
-      }}  placeholder='Enter todo...' />
+      }}  placeholder=' Enter todo...' />
 
       <button onClick={()=>{
        if (todoValue.trim() !== '') { // Check if todoValue is not empty or just spaces
